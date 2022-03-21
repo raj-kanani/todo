@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>get session</title>
+</head>
+<body>
+<h1>get session successs....</h1>
+<h3> first name is {{name}} & <br> last name is {{lname}}</h3><hr>
+{% for key in keys %}
+    {{key}}<br>
+{% endfor %}<br><hr>
+{% for key,value in items %}
+    {{key}} : {{value}}<br>
+{% endfor %}<br><hr>
+
+{{request.session.get_session_cookie_age}}<br>
+{{request.session.get_expiry_age}}<br>
+{{request.session.get_expiry_date}}<br>
+{{request.session.get_expire_at_browser_close}}<br>
+
+
+</body>
+</html>
