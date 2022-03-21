@@ -1,5 +1,4 @@
 from datetime import datetime, timedelta
-
 from django.http import HttpResponse
 from django.shortcuts import render, HttpResponseRedirect, redirect
 from django.contrib import messages
@@ -93,6 +92,7 @@ def change_pwd(request):
 
 
 ######### COOKIE area....................
+
 def setcookie(request):
     response = render(request, 'setcookie.html')
     response.set_signed_cookie('name', 'raj', salt='nm', expires=datetime.utcnow() + timedelta(days=2))
@@ -115,7 +115,7 @@ def delcookie(request):
     return response
 
 
-# Session area ...........
+# Session area ....
 def setsession(request):
     request.session['name'] = 'raj'
     request.session['lname'] = 'patel'
